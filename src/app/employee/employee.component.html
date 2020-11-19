@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <div class="listview-table-wrap">
+        	<br>
+        	<button class="btn btn-success btn-lg float-right" [routerLink]="['/sign-up']">Add employee</button>
+        	<br>
+        	<br>
+        	<br>
+        	<table datatable id="table1" [dtOptions]="dtOptions" class="pr-datatable table table-hover">
+        		<thead>
+		            <tr>
+		                <th scope="col" *ngFor="let item of blocks"><span>{{item.name}}</span></th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		        	<tr *ngFor="let item of dataSet">
+			        	<td>{{item.firstName}}</td>
+			        	<td>{{item.lastName}}</td>
+			        	<td>{{item.date | date : "mediumDate"}}</td>
+			        </tr>
+		        </tbody>
+		    </table>
+    	</div>
+    </div>
+</div>

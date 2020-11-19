@@ -1,0 +1,47 @@
+<section class="pr-section p-0">
+	<div class="container-fluid px-0">
+		<div class="row justify-content-center singin-wrap-main singin-wrap">
+            <div class="col-auto cust-col-lt">
+                <div class="singin-wrap-lt">
+
+			    	<div class="col-12">
+			    		<div class="singin-form-wrap">                        
+							<div class="inner-form">
+							    <form name="form" [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit()">
+							    	<div class="form-row">
+							            <div class="col-12">
+							                <label for="">Email ID</label>
+							                <input type="text" class="form-control" placeholder="Juile@test.com" formControlName="emailControl" [ngClass]="{ 'is-invalid': loginFormSubmitted && lf.emailControl.errors }"/>
+							                <div *ngIf="loginFormSubmitted && lf.emailControl.errors" class="invalid-feedback">
+							                    <div *ngIf="lf.emailControl.errors.required">Email required.</div>
+							                </div>
+							            </div>
+							        </div>
+							        <div class="form-row">
+							            <div class="col-12">
+							                <label for="">Password</label>
+							                <input type="password" class="form-control form-pwd" placeholder="Password"  name="pass" formControlName="passwordControl" [ngClass]="{ 'is-invalid': loginFormSubmitted && lf.passwordControl.errors }"/>
+							                <div *ngIf="loginFormSubmitted && lf.passwordControl.errors" class="invalid-feedback">
+							                    <div *ngIf="lf.passwordControl.errors.required">Password required.</div>
+							                </div>
+							            </div>
+							        </div>
+							        <div class="form-row">
+							            <div class="col-12">
+							                <button class="btn btn-secondary st text-center sign-in-btn btn-block" id="resetsidebar">Sign In</button>
+							            </div>
+							        </div>
+							        <div class="form-row">
+							            <div class="col-12">
+							                <a routerLink="/sign-up">Need a account sign up here.</a>
+							            </div>
+							        </div>
+							    </form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
