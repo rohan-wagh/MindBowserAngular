@@ -24,7 +24,7 @@ constructor(private formBuilder : FormBuilder, private apiService : ApiService, 
     this.managerForm = this.formBuilder.group({
     	firstNameControl: ['', [Validators.required]],
     	LastNameControl: ['', [Validators.required]],
-    	emailControl: ['', [Validators.required]],
+    	emailControl: ['', [Validators.required, Validators.email]],
 	    passwordControl: ['', [Validators.required]],
 	    companyControl: ['', [Validators.required]],
 	    addressControl: ['', [Validators.required]],

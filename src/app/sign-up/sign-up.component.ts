@@ -23,13 +23,13 @@ constructor(private formBuilder : FormBuilder, private apiService : ApiService, 
     this.employeeForm = this.formBuilder.group({
     	firstNameControl: ['', [Validators.required]],
     	LastNameControl: ['', [Validators.required]],
-    	emailControl: ['', [Validators.required]],
+    	emailControl: ['', [Validators.required, Validators.email]],
 	    passwordControl: ['', [Validators.required]],
 	    companyControl: ['', [Validators.required]],
 	    addressControl: ['', [Validators.required]],
 	    dobControl: ['', [Validators.required]],
     });
-    // LogEmployeein form code end
+    // Employee form code end
 }
 
 ngOnInit(): void {

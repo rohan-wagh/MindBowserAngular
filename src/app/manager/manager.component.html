@@ -43,6 +43,7 @@
                                     <input type="text" class="form-control form-pwd" placeholder="Email"  formControlName="emailControl" [ngClass]="{ 'is-invalid': managerFormSubmitted && mf.emailControl.errors }"/>
                                     <div *ngIf="managerFormSubmitted && mf.emailControl.errors" class="invalid-feedback">
                                         <div *ngIf="mf.emailControl.errors.required">Email required.</div>
+                                        <div *ngIf="mf.emailControl.errors.email">Pease enter a valid email.</div>
                                     </div>
                                 </div>
                                 <div class="col">

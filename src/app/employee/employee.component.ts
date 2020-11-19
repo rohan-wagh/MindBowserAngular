@@ -19,6 +19,7 @@ blocks = [
 dataSet = []
 
 constructor(private apiService : ApiService) {
+	// API call for employee list start
 	this.apiService.get("employee/list").subscribe(resp=>{
 		for(let item of resp.results){
 			this.dataSet.push({
@@ -28,6 +29,7 @@ constructor(private apiService : ApiService) {
 			})
 		}
 	})
+	// API call for employee list end
 }
 
 ngOnInit(): void {
