@@ -2,7 +2,7 @@
 
 Step 1 - Require Angular 9, node version 12.19 ang django project server should be running
 
-Step 2 - npm i
+Step 2 - npm i  and  ng add @angular/localize
 
 Step 3 - ng serv
 
